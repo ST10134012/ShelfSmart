@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Toast
 import za.co.varsitycollege.st10134012.shelfsmart.databinding.ActivitySignInBinding
 import com.google.firebase.database.*
+import java.security.MessageDigest
+import java.util.Base64
 
 class SignIn : AppCompatActivity() {
 
@@ -54,18 +56,27 @@ class SignIn : AppCompatActivity() {
                     for (userSnapshot in dataSnapshot.children) {
                         val userData = userSnapshot.getValue(UserData::class.java)
 
-                        if (userData != null && userData.password == password) {
-                            Toast.makeText(this@SignIn, "Login Successful", Toast.LENGTH_SHORT).show()
-                            val userId = userData.id
-                            // Store the userId in shared preferences
-                            val sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
-                            val editor = sharedPreferences.edit()
-                            editor.putString("userId", userId)
-                            editor.apply()
-                            // Start main activity and finish login activity
-                            startActivity(Intent(this@SignIn, MainActivity::class.java))
-                            finish()
-                            return
+                        if (userData != null) {
+                            val storedSalt = userData.salt ?: ""
+                            val storedHashedPassword = userData.passwordHash ?: ""
+                            val hashedInputPassword = hashPassword(password, storedSalt)
+
+                            // Compare the provided password hash with the stored hash
+                            if (hashedInputPassword == storedHashedPassword) {
+                                Toast.makeText(this@SignIn, "Login Successful", Toast.LENGTH_SHORT).show()
+                                val userId = userData.id ?: "" // Handle possible null value for id
+                                // Store the userId in shared preferences
+                                val sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
+                                val editor = sharedPreferences.edit()
+                                editor.putString("userId", userId)
+                                editor.apply()
+                                // Start main activity and finish login activity
+                                startActivity(Intent(this@SignIn, MainActivity::class.java))
+                                finish()
+                                return
+                            } else {
+                                Toast.makeText(this@SignIn, "Login failed: Incorrect password", Toast.LENGTH_SHORT).show()
+                            }
                         }
                     }
                 } else {
@@ -78,4 +89,17 @@ class SignIn : AppCompatActivity() {
             }
         })
     }
+
+
+    // Hash the input password with the stored salt using SHA-256
+    private fun hashPassword(password: String, salt: String): String {
+        val messageDigest = MessageDigest.getInstance("SHA-256")
+        val passwordBytes = password.toByteArray()
+        val saltBytes = Base64.getDecoder().decode(salt)
+        messageDigest.update(saltBytes) // Add salt to the hash calculation
+        val hashedBytes = messageDigest.digest(passwordBytes) // Hash the password with salt
+        return Base64.getEncoder().encodeToString(hashedBytes) // Convert to Base64 for comparison
+    }
 }
+
+

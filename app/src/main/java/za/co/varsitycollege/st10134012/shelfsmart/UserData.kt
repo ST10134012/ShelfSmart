@@ -1,7 +1,11 @@
 package za.co.varsitycollege.st10134012.shelfsmart
 
 data class UserData(
-    val id: String? = null,  // Firebase unique ID for the user
-    val email: String? = null,  // User's email address
-    val password: String? = null
-)
+    val id: String? = null,
+    val email: String? = null,
+    val passwordHash: String? = null,
+    val salt: String? = null
+) {
+    // No-argument constructor for Firebase
+    constructor() : this(null, null, null, null)
+}

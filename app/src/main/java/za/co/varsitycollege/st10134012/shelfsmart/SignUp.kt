@@ -6,6 +6,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import za.co.varsitycollege.st10134012.shelfsmart.databinding.ActivitySignUpBinding
 import com.google.firebase.database.*
+import java.security.MessageDigest
+import java.security.SecureRandom
+import java.util.Base64
 
 class SignUp : AppCompatActivity() {
 
@@ -22,7 +25,7 @@ class SignUp : AppCompatActivity() {
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.reference.child("users")
 
-        // Handle back arrow click (optional if you want to navigate back)
+        // Handle back arrow click
         binding.backArrow.setOnClickListener {
             finish() // Closes the current activity
         }
@@ -58,7 +61,10 @@ class SignUp : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (!dataSnapshot.exists()) {
                     val id = databaseReference.push().key
-                    val userData = UserData(id, email, password)
+                    val salt = generateSalt()
+                    val hashedPassword = hashPassword(password, salt)
+
+                    val userData = UserData(id, email, hashedPassword, salt)
                     id?.let {
                         databaseReference.child(it).setValue(userData)
                             .addOnSuccessListener {
@@ -80,4 +86,25 @@ class SignUp : AppCompatActivity() {
             }
         })
     }
+
+    // Generate a random salt using SecureRandom
+    private fun generateSalt(): String {
+        val random = SecureRandom()
+        val salt = ByteArray(16) // Create a 16-byte salt
+        random.nextBytes(salt)
+        return Base64.getEncoder().encodeToString(salt) // Convert salt to Base64 string for storing
+    }
+
+    // Hash the password with the salt using SHA-256
+    private fun hashPassword(password: String, salt: String): String {
+        val messageDigest = MessageDigest.getInstance("SHA-256")
+        val passwordBytes = password.toByteArray()
+        val saltBytes = Base64.getDecoder().decode(salt)
+        messageDigest.update(saltBytes)
+        val hashedBytes = messageDigest.digest(passwordBytes)
+        return Base64.getEncoder().encodeToString(hashedBytes)
+    }
 }
+
+
+
