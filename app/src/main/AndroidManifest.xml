@@ -30,6 +30,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity android:name=".SettingsActivity"
+            android:exported="false"/>
+        
+        <activity android:name=".EditEmailActivity"/>
+        <activity android:name=".EditPasswordActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".OptionsActivity"/>
+
 
         <meta-data
             android:name="preloaded_fonts"

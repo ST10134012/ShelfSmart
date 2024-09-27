@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditEmailActivity">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_gravity="start"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back_arrow"
+        tools:ignore="HardcodedText,ImageContrastCheck,TouchTargetSizeCheck" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/edit_email_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_email"
+        android:textColor="#407A7E"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+         />
+
+    <!-- Email Input Field -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:paddingTop="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/input_box_background"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/email_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Email Icon"
+            android:src="@drawable/ic_email"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Enter your email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="12dp"
+            android:textSize="16sp"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextContrastCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <!-- Confirm Email Input Field -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_box_background"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/confirm_email_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Confirm Email Icon"
+            android:src="@drawable/ic_email"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/confirm_email_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Confirm your email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="12dp"
+            android:textSize="16sp"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextContrastCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <!-- Edit Email Button -->
+    <Button
+        android:id="@+id/edit_email_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#3DC9DC"
+        android:padding="12dp"
+        android:text="Edit Email"
+        android:textColor="#FFFFFF"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck" />
+
+</LinearLayout>
