@@ -13,9 +13,6 @@
         android:theme="@style/Theme.ShelfSmart"
         tools:targetApi="31">
         <activity
-            android:name=".GoogleSignIn"
-            android:exported="false" />
-        <activity
             android:name=".SignIn"
             android:exported="false" />
         <activity
