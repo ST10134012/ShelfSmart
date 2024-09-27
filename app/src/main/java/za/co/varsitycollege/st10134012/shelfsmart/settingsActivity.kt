@@ -28,21 +28,29 @@ class SettingsActivity : AppCompatActivity() {
         // Handle click for the forward icon in user info section
         binding.forwardIconProfile.setOnClickListener {
             Toast.makeText(this, "User Profile Forward icon clicked", Toast.LENGTH_SHORT).show()
+            val intent =Intent(this,ProfileActivity::class.java)
+            startActivity(intent)
         }
 
         // Language option click listener
         binding.forwardIconLanguage.setOnClickListener {
             Toast.makeText(this, "Language Forward icon clicked", Toast.LENGTH_SHORT).show()
+            val intent =Intent(this,OptionsActivity::class.java)
+            startActivity(intent)
         }
 
         // Wi-Fi option click listener
         binding.forwardIconWifi.setOnClickListener {
             Toast.makeText(this, "Wi-Fi Forward icon clicked", Toast.LENGTH_SHORT).show()
+            val intent =Intent(this,OptionsActivity::class.java)
+            startActivity(intent)
         }
 
         // Notifications option click listener
         binding.forwardIconNotification.setOnClickListener {
             Toast.makeText(this, "Notifications Forward icon clicked", Toast.LENGTH_SHORT).show()
+            val intent =Intent(this,OptionsActivity::class.java)
+            startActivity(intent)
         }
 
         binding.forwardIconLanguage.setOnClickListener {
