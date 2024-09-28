@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">ShelfSmart</string>
     <string name="default_web_client_id">198658919150-v4dqjn0b786j2n11pipmv68juurplktv.apps.googleusercontent.com</string>
-
+    <string name="title_welcome">ShelfSmart</string>
+    <string name="search_hint">Search for books</string>
     <!-- TODO: NoSQL Database -->
 
     <!-- Sync Preferences -->
@@ -44,4 +45,5 @@
     <string name="description_8">Barcelona church offers open-air space for Ramadan</string>
     <string name="description_9">Trillions of cicadas set to emerge in the US, here\'s why</string>
     <string name="description_10">Homemaker, economist: Candidates from all walks of life in Bengal assembly</string>
+    <string name="title_activity_sidebar">SidebarActivity</string>
 </resources>
