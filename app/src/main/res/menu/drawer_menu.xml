@@ -1,22 +1,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/nav_home"
-        android:icon="@drawable/home_icon"
-        android:title="Home"
-        android:gravity="start"/>
-    <item
-        android:id="@+id/nav_shelf"
-        android:icon="@drawable/my_shelf"
-        android:title="My Shelf"
-        android:gravity="start"/>
-    <item
-        android:id="@+id/nav_sharing"
-        android:icon="@drawable/sharing"
-        android:title="Sharing"
-        android:gravity="start"/>
-    <item
-        android:id="@+id/nav_setting"
-        android:icon="@drawable/setting_icon"
-        android:title="Settings"
-        android:gravity="start"/>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="Home"
+            android:tint="@null"/>
+        <item
+            android:id="@+id/nav_shelf"
+            android:icon="@drawable/my_shelf"
+            android:title="My Shelf"
+            android:tint="@null"/>
+        <item
+            android:id="@+id/nav_sharing"
+            android:icon="@drawable/sharing"
+            android:title="Sharing"
+            android:tint="@null"/>
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/setting_icon"
+            android:title="Settings"
+            android:tint="@null"/>
+    </group>
 </menu>
