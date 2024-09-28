@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/menu_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/menu_icon_desc"
+            app:srcCompat="@drawable/ic_back_arrow"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            tools:ignore="ImageContrastCheck" />
+
+
+        <TextView
+            android:id="@+id/settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/profile"
+            android:textColor="#3F7682"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            />
+    </RelativeLayout>
+
+    <!-- User Info -->
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_rectangle_sky"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_user_light"
+            android:contentDescription="@string/user_icon_desc" />
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/user_icon"
+            android:text="@string/user_email_com"
+            android:textColor="#FBF7F7"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap,TextContrastCheck" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="250dp"
+        android:paddingHorizontal="5dp">
+
+
+        <Button
+            android:id="@+id/button_edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3DC9DC"
+            android:paddingHorizontal="5dp"
+            android:text="@string/edit_email"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+
+        <Button
+            android:id="@+id/button_edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3DC9DC"
+            android:paddingHorizontal="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/edit_password"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/button_delete_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_button"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/delete_account"
+            android:textColor="#3DC9DC"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+    </LinearLayout>
+
+
+</LinearLayout>

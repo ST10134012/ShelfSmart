@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/menu_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/menu_icon_desc"
+            app:srcCompat="@drawable/ic_menu" />
+
+
+        <TextView
+            android:id="@+id/settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:text="@string/settings"
+            android:textColor="#3F7682"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- User Info -->
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_rounded_rectangle_g"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/user_icon_desc"
+            app:srcCompat="@drawable/ic_user" />
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/user_icon"
+            android:text="@string/user_email_com"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageButton
+            android:id="@+id/forward_icon_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/forward_icon_profile_desc"
+            app:srcCompat="@drawable/ic_forward"
+            tools:ignore="DuplicateIds" />
+
+    </RelativeLayout>
+
+    <!-- Settings Options -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="224dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="5dp">
+
+        <!-- Language Option -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#FFFFFF"
+            android:paddingVertical="16dp">
+
+            <ImageView
+                android:id="@+id/language_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:contentDescription="@string/language_icon_desc"
+                android:src="@drawable/ic_languages" />
+
+            <TextView
+                android:id="@+id/language_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/language_icon"
+                android:text="@string/language"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/language_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@id/forward_icon_language"
+                android:text="@string/english"
+                android:textColor="#757575"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/forward_icon_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/forward_icon_language_desc"
+                app:srcCompat="@drawable/ic_forward"
+                tools:ignore="DuplicateIds" />
+
+        </RelativeLayout>
+
+        <!-- Wi-Fi Option -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#FFFFFF"
+            android:paddingVertical="16dp">
+
+            <ImageView
+                android:id="@+id/wifi_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:contentDescription="@string/wifi_icon_desc"
+                android:src="@drawable/ic_network" />
+
+            <TextView
+                android:id="@+id/wifi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/wifi_icon"
+                android:text="@string/wi_fi"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/wifi_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@id/forward_icon_wifi"
+                android:text="@string/not_connected"
+                android:textColor="#757575"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/forward_icon_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/go_to_available_networks"
+                app:srcCompat="@drawable/ic_forward"
+                tools:ignore="DuplicateIds" />
+
+        </RelativeLayout>
+
+        <!-- Notifications Option -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:paddingVertical="16dp">
+
+            <ImageView
+                android:id="@+id/notifications_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:contentDescription="@string/notifications_icon_desc"
+                android:src="@drawable/ic_notifications" />
+
+            <TextView
+                android:id="@+id/notifications_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/notifications_icon"
+                android:text="@string/notifications"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/forward_icon_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/forward_icon_desc"
+                app:srcCompat="@drawable/ic_forward"
+                tools:ignore="DuplicateIds" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_color">#E8E4DC</color>
     <color name="button_color">#3DC9DC</color>
+    <color name="button_color_trans">#3DC9DC</color>
     <color name="input_background_color">#F3F5F7</color>
     <color name="link_color">#0000EE</color>
     <color name="grey_text_color">#8F9092</color>
