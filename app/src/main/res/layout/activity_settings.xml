@@ -223,5 +223,17 @@
                 tools:ignore="DuplicateIds" />
 
         </RelativeLayout>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/sign_out_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:backgroundTint="#E91E63"
+        android:textColor="#FFFFFF" />
+
 </LinearLayout>

@@ -81,6 +81,5 @@ class SettingsActivity : AppCompatActivity() {
             val intent = Intent(this, OptionsActivity::class.java)
             startActivity(intent)
         }
-
-    }
-}
+        }
+        }

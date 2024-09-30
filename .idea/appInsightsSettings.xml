@@ -9,10 +9,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="za.co.varsitycollege.st10134012.shelfsmart" />
-                  <option name="mobileSdkAppId" value="1:198658919150:android:8282563eff79e8a82541ff" />
-                  <option name="projectId" value="shelfsmart-4a172" />
-                  <option name="projectNumber" value="198658919150" />
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
