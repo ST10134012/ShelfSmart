@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
 
 
     <!-- Main Content -->
@@ -19,7 +20,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/color"
+            android:background="@drawable/transparent_button"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme">
 
