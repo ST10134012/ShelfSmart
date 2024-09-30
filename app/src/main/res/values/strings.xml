@@ -77,4 +77,6 @@
     <string name="edit_password_lbl">Edit Password</string>
     <string name="title_activity_search_result">SearchResultActivity</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_home">Home</string>
+
 </resources>

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "198658919150-91fj63hilkphd04eqfajja7i9i9jrcbe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "za.co.varsitycollege.st10134012.shelfsmart",
+            "certificate_hash": "fbbf50937ff625dbd3f74eb6badc6c271aa4ea88"
+          }
+        },
+        {
           "client_id": "198658919150-v4dqjn0b786j2n11pipmv68juurplktv.apps.googleusercontent.com",
           "client_type": 3
         }
