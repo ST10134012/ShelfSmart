@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_24"
+            android:title="@string/menu_home"
+            android:tint="@null"/>
+        <item
+            android:id="@+id/nav_shelf"
+            android:icon="@drawable/ic_shelf"
+            android:title="My Shelf"
+            android:tint="@null"/>
+        <item
+            android:id="@+id/nav_sharing"
+            android:icon="@drawable/ic_favorite_24"
+            android:title="@string/menu_favourites"
+            android:tint="@null"/>
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_24"
+            android:title="@string/menu_settings"
+            android:tint="@null"/>
+    </group>
+</menu>
