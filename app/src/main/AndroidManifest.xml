@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShelfSmart"
         tools:targetApi="31">
+
         <activity
             android:name=".SidebarActivity"
             android:exported="false"
@@ -19,15 +20,26 @@
             android:theme="@style/Theme.ShelfSmart" >
 
         </activity>
+
         <activity
             android:name=".SignIn"
-            android:exported="false" />
+            android:exported="false" >
+
+        </activity>
+
         <activity
             android:name=".SignUp"
-            android:exported="false" />
+            android:exported="false" >
+
+        </activity>
+
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false" >
+
+        </activity>
+
+
         <activity
             android:name=".Registration"
             android:exported="true">
@@ -36,19 +48,31 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
 
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false">
         </activity>
         
-        <activity android:name=".SettingsActivity"
-            android:exported="false" >
+
+        
+        <activity android:name=".EditEmailActivity">
 
         </activity>
-        
-        <activity android:name=".EditEmailActivity"/>
-        <activity android:name=".EditPasswordActivity"/>
-        <activity android:name=".ProfileActivity"/>
-        <activity android:name=".OptionsActivity"/>
 
+        <activity android:name=".EditPasswordActivity">
+
+        </activity>
+
+        <activity android:name=".ProfileActivity">
+
+        </activity>
+
+        <activity android:name=".OptionsActivity"
+            android:exported="false">
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

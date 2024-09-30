@@ -1,4 +1,6 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
 
@@ -10,12 +12,12 @@
         <item
             android:id="@+id/nav_shelf"
             android:icon="@drawable/ic_shelf"
-            android:title="My Shelf"
+            android:title="@string/menu_shelf"
             android:tint="@null"/>
         <item
             android:id="@+id/nav_sharing"
-            android:icon="@drawable/ic_favorite_24"
-            android:title="@string/menu_favourites"
+            android:icon="@drawable/ic_sharing_24"
+            android:title="@string/menu_sharing"
             android:tint="@null"/>
         <item
             android:id="@+id/nav_setting"
