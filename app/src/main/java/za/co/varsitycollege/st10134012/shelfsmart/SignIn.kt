@@ -49,6 +49,7 @@ class SignIn : AppCompatActivity() {
     }
 
     // Function to handle login logic with Firebase
+    // Function to handle login logic with Firebase
     private fun loginUser(email: String, password: String) {
         databaseReference.orderByChild("email").equalTo(email).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -69,6 +70,7 @@ class SignIn : AppCompatActivity() {
                                 val sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
                                 val editor = sharedPreferences.edit()
                                 editor.putString("userId", userId)
+                                editor.putString("userEmail", email) // Save the email as well
                                 editor.apply()
                                 // Start main activity and finish login activity
                                 startActivity(Intent(this@SignIn, MainActivity::class.java))
@@ -89,6 +91,7 @@ class SignIn : AppCompatActivity() {
             }
         })
     }
+
 
 
     // Hash the input password with the stored salt using SHA-256
