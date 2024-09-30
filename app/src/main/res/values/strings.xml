@@ -75,4 +75,6 @@
     <string name="option">Option</string>
     <string name="i_like_it">I Like It</string>
     <string name="edit_password_lbl">Edit Password</string>
+    <string name="title_activity_search_result">SearchResultActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
 </resources>

@@ -92,7 +92,7 @@ class EditPasswordActivity : AppCompatActivity() {
     }
 
     // You can implement this function to retrieve the currently logged-in user's ID
-    private fun getCurrentUserId(): String? {
+    private fun getCurrentUserId(): String {
         // Retrieve the user's ID from session or authentication provider
         return "user_id_example" // Replace with actual user ID
     }

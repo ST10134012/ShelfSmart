@@ -65,6 +65,7 @@
                 android:background="@android:color/transparent"
                 android:inputType="text" />
 
+
             <!-- Search Icon -->
             <ImageView
                 android:id="@+id/search_icon"
