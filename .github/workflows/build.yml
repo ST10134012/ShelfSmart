@@ -38,6 +38,9 @@ jobs:
         build-tools-version: 34.0.0
         ndk-version: 21.3.6528147
 
+    - name: Set executable permissions for gradlew
+      run: chmod +x ./gradlew
+
     - name: Build with Gradle
       run: ./gradlew build
 
