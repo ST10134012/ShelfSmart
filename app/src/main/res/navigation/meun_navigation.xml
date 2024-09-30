@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="za.co.varsitycollege.st10134012.shelfsmart.ui.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_my_shelf"
+        android:name="za.co.varsitycollege.st10134012.shelfsmart.ui.MyShelfFragment"
+        android:label="@string/menu_shelf"
+        tools:layout="@layout/fragment_my_shelf" />
+
+    <fragment
+        android:id="@+id/navigation_sharing"
+        android:name="za.co.varsitycollege.st10134012.shelfsmart.ui.SharingFragment"
+        android:label="@string/menu_sharing"
+        tools:layout="@layout/fragment_sharing" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="za.co.varsitycollege.st10134012.shelfsmart.ui.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+    
+</navigation>
