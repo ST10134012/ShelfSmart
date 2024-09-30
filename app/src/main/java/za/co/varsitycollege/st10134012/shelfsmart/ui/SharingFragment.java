@@ -30,7 +30,6 @@ public class SharingFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(SharingViewModel.class);
         // TODO: Use the ViewModel
     }
 
