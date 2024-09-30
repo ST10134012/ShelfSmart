@@ -83,6 +83,8 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation ("com.google.android.gms:play-services-auth:21.2.0")
+    implementation ("androidx.appcompat:appcompat:1.4.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.0")
 
 
 }
