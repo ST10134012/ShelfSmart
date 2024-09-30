@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "198658919150",
+    "firebase_url": "https://shelfsmart-4a172-default-rtdb.firebaseio.com",
+    "project_id": "shelfsmart-4a172",
+    "storage_bucket": "shelfsmart-4a172.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198658919150:android:8282563eff79e8a82541ff",
+        "android_client_info": {
+          "package_name": "za.co.varsitycollege.st10134012.shelfsmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198658919150-v4dqjn0b786j2n11pipmv68juurplktv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJrYUR9E8VVgdwociTJeJXVmK9ufS9t6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198658919150-8t4n5isumga1s0jicg4m3bnck67usq8o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
