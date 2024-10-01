@@ -17,17 +17,42 @@
         android:text="Shelf Smart"
         android:textAlignment="center"
         android:textColor="#3F7682"
-        android:textSize="25sp"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="8.0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/my_shelf_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Shelf"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
+        android:backgroundTint="@color/button_color"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/settings_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+
+        android:backgroundTint="@color/button_color"
+        android:layout_marginBottom="20dp"/>
 
 </LinearLayout>

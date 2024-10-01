@@ -33,9 +33,7 @@ class BookDetailActivity : AppCompatActivity() {
         // Initialize Firebase Auth and Database
         firebaseAuth = FirebaseAuth.getInstance()
         val currentUser = firebaseAuth.currentUser
-        databaseReference = FirebaseDatabase.getInstance().reference.child("user_books")
-
-
+        databaseReference = FirebaseDatabase.getInstance().reference.child("users")
 
         titleTextView = findViewById(R.id.titleTextView)
         authorTextView = findViewById(R.id.authorTextView)
@@ -61,7 +59,6 @@ class BookDetailActivity : AppCompatActivity() {
                 Picasso.get().load(imageUrl).into(imageView)
             }
 
-
             // Set up back button listener
             findViewById<ImageButton>(R.id.menu_icon).setOnClickListener {
                 finish() // Finish the current activity and return to MainActivity
@@ -71,25 +68,25 @@ class BookDetailActivity : AppCompatActivity() {
             saveButton.setOnClickListener {
                 // Add the book to the current user's shelf
                 currentUser?.uid?.let { userId ->
-                    book?.let { currentBook ->
-                        addToUserShelf(userId, currentBook)
-                    } ?: run {
-                        Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
+                    book?.let { currentBook ->  // Use 'book' instead of 'it'
+                        addToUserShelf(userId, currentBook) // Pass the book object
                     }
+                } ?: run {
+                    Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
                 }
             }
+
         }
     }
-
 
     // Function to add the book to the current user's shelf in Firebase
     private fun addToUserShelf(userId: String, book: Books) {
         // Create a unique ID for the book
-        val bookId = databaseReference.child(userId).push().key
+        val bookId = databaseReference.child(userId).child("user_books").push().key
 
         bookId?.let {
-            // Add the book to the user's shelf in Firebase under "user_books/{userId}/{bookId}"
-            databaseReference.child(userId).child(it).setValue(book)
+            // Add the book to the user's shelf in Firebase under "users/{userId}/user_books/{bookId}"
+            databaseReference.child(userId).child("user_books").child(it).setValue(book)
                 .addOnSuccessListener {
                     Toast.makeText(this@BookDetailActivity, "Book added to shelf", Toast.LENGTH_SHORT).show()
                 }

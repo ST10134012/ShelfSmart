@@ -27,6 +27,19 @@ class MainActivity : AppCompatActivity() {
 
         // Fetch the books
         getAllBooks()
+
+        // Setup click listeners for buttons
+        binding.settingsBtn.setOnClickListener {
+            // Navigate to SettingsActivity
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.myShelfBtn.setOnClickListener {
+            // Navigate to MyShelfActivity
+            val intent = Intent(this, MyShelf::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun getAllBooks() {
@@ -61,6 +74,4 @@ class MainActivity : AppCompatActivity() {
         }
         binding.recyclerview.adapter = adapter
     }
-
 }
-

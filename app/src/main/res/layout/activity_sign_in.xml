@@ -102,15 +102,6 @@
         android:orientation="horizontal"
         android:gravity="center">
 
-        <TextView
-            android:id="@+id/forgot_password_link"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password?"
-            android:fontFamily="@font/poppins_semibold"
-            android:textColor="@color/grey_text_color"
-            android:textSize="14sp"
-            android:layout_marginRight="5dp"/>
 
         <TextView
             android:id="@+id/sign_up_link"
@@ -125,23 +116,5 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="30dp">
-
-        <Button
-            android:id="@+id/google_signin_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/transparent_button"
-            android:padding="12dp"
-            android:drawableStart="@drawable/ic_google"
-            android:text="Sign in with Google"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
-    </LinearLayout>
 
 </LinearLayout>
