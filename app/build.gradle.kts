@@ -83,8 +83,13 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation ("com.google.android.gms:play-services-auth:21.2.0")
-    implementation ("androidx.appcompat:appcompat:1.4.0")
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.0")
+    implementation ("androidx.appcompat:appcompat:1.7.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    implementation("com.squareup.retrofit2:retrofit:2.6.1")
+    implementation("com.squareup.retrofit2:converter-gson:2.6.1")
+    implementation("com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0")
+    implementation("com.squareup.picasso:picasso:2.8")
 
 
 }

@@ -82,7 +82,7 @@ class Registration : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Log.d("Firebase Auth", "Sign-in successful")
-                        val intent = Intent(this, HomeActivity::class.java)
+                        val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                         finish() // Close Registration activity
                     } else {

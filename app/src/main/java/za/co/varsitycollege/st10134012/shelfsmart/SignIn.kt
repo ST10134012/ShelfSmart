@@ -73,7 +73,7 @@ class SignIn : AppCompatActivity() {
                                 editor.putString("userEmail", email) // Save the email as well
                                 editor.apply()
                                 // Start main activity and finish login activity
-                                val intent = Intent(this@SignIn, HomeActivity::class.java)
+                                val intent = Intent(this@SignIn, MainActivity::class.java)
                                 startActivity(intent)
                                 finish()
                                 return
