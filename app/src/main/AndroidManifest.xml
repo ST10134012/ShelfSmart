@@ -21,16 +21,7 @@
         <activity
             android:name=".BookDetailActivity"
             android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Theme.ShelfSmart" />
-        <activity
-            android:name=".SearchResultsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_search_result"
-            android:theme="@style/Theme.ShelfSmart" />
+
         <activity
             android:name=".SidebarActivity"
             android:exported="false"
